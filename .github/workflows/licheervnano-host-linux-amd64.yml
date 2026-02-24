@@ -70,12 +70,10 @@ jobs:
                 cp build/boards/sg200x/sg2002_licheervnano_sd/sg2002_licheervnano_sd_defconfig bak.config
 
               popd
-
-      - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v3
+              
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
         with:
-          retention-days: 30
-          name: licheervnano-cvi-mmf-sdk-output-${{ env.BUILD_ID }}
-          path: |
-                  cvi_mmf_sdk/install/soc_sg2002_licheervnano_sd/images/*
-                  cvi_mmf_sdk/install/soc_sg2002_licheervnano_sd/*.bin
+          files: cvi_mmf_sdk/install/soc_sg2002_licheervnano_sd/images/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
