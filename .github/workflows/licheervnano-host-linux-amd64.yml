@@ -43,7 +43,9 @@ jobs:
                                   chrpath socat python3-pip python3-pexpect xz-utils debianutils \
                                   iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev \
                                   python3-subunit mesa-common-dev zstd liblz4-tool libacl1 parted erofs-utils \
-                                  genext2fs mtools fatcat ckermit neovim cscope asciinema libconfuse-dev
+                                  genext2fs mtools fatcat ckermit neovim cscope asciinema libconfuse-dev \
+                                  picolibc-aarch64-linux-gnu crossbuild-essential-arm64 binutils-aarch64-linux-gnu \
+                                  gcc-aarch64-linux-gnu g++-aarch64-linux-gnu cpp-aarch64-linux-gnu libc6-dev-arm64-cross
 
 
       - name: Checkout Repo
